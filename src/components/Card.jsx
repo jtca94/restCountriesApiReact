@@ -6,7 +6,7 @@ const Card = ({data, query, sorter}) => {
         <div key={official} className="col-sm-12 col-md-4 col-lg-3">
             <div  className="card h-100">
                 <img src={png} className="card-img-top" alt="..."/>
-                <div className="card-body">
+                <div className="card-body pb-0">
                     <h5 className="card-title">{common}</h5>
                 </div>
                 <ul className="list-group list-group-flush">

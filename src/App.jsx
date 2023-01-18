@@ -24,23 +24,23 @@ const App = () => {
       <Nav 
           setQuery={setQuery}
           />
-        <div className="text-center mt-5">
+        <section className="text-center mt-5">
           <Buttons
                   handleSortName={handleSortName}
                   handleSortPop={handleSortPop}
                   handleSortArea={handleSortArea}
           
           />
-        </div>
-        <div className="container">
-          <section className="row g-3 mt-5">  
+        </section>
+        <section className="container">
+          <div className="row g-3 mt-5">  
               <Card 
                   data={data}
                   query={query}
                   sorter={sorter} 
                   />       
-          </section>
           </div>
+        </section>
 
       <Footer/>
       <Api 
