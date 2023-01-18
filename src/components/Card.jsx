@@ -1,4 +1,5 @@
 const Card = ({data, query, sorter}) => {
+    //Constante para usar en el metodo .map
     const maper = pais=> {
         const {name: {common, official}, continents, tld, unMember, capital, area, population, flags: {png}} = pais
         return (
@@ -20,11 +21,14 @@ const Card = ({data, query, sorter}) => {
         </div>
         )
     }
+    // Constante para usar en el metodo .filter
     const filtro = (element) => element.name.common.toLowerCase().includes(query.toLowerCase());
+
+
     if (sorter == 0) {
         return (
         data.filter(filtro).map(maper)
-    )}
+        )}
     if (sorter == 1) {
         return (
             data.filter(filtro).sort((d1, d2) => (d1.name.common < d2.name.common) ? -1 : (d1.name.common > d2.name.common) ? 1 : 0).map(maper)
@@ -37,9 +41,5 @@ const Card = ({data, query, sorter}) => {
         return (
             data.filter(filtro).sort((d1, d2) => (d1.area < d2.area) ? 1 : (d1.area > d2.area) ? -1 : 0).map(maper)
         )}
-          
-
 }
-
-
 export default Card

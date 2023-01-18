@@ -22,7 +22,6 @@ const App = () => {
     return (
     <div className="bg-dark">
       <Nav 
-          query={query}
           setQuery={setQuery}
           />
         <div className="text-center mt-5">
