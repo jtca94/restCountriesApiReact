@@ -7,20 +7,7 @@ const Nav = ({query, setQuery}) => {
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarScroll">
-                <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
-                    <li className="nav-item">
-                    <a className="nav-link active text-light" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li className="nav-item">
-                    <a className="nav-link text-light" href="#">Link</a>
-                    </li>
-                    <li className="nav-item">
-                    <a className="nav-link text-light me-5">Link</a>
-                    </li>
-                </ul>
-                
-                    <input onChange={(e) => setQuery(e.target.value)} value={query}  className="form-control me-2 ms-auto w-75" type="search" placeholder="Search by name/continent" />
-                    
+                <input onChange={(e) => setQuery(e.target.value)} value={query}  className="form-control mt-3 mt-md-0 ms-md-auto w-50" type="search" placeholder="Search by name" />                  
                 </div>
             </div>
         </nav>

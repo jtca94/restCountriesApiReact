@@ -3,6 +3,7 @@ import Api from './components/Api'
 import Card from './components/Card'
 import Nav from './components/Nav'
 import Buttons from './components/Buttons'
+import Footer from "./components/Footer";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -18,7 +19,6 @@ const App = () => {
   const handleSortArea = () => {
     setSorter(3)       
   }
-  
     return (
     <div className="bg-dark">
       <Nav 
@@ -43,7 +43,7 @@ const App = () => {
           </section>
           </div>
 
-
+      <Footer/>
       <Api 
         data={data}
         setData={setData}

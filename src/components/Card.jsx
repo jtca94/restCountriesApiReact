@@ -19,25 +19,25 @@ const Card = ({data, query, sorter}) => {
             </div>
         </div>
         )
-
     }
+    const filtro = (element) => element.name.common.toLowerCase().includes(query.toLowerCase());
     if (sorter == 0) {
         return (
-        data.filter((element) => element.name.common.toLowerCase().includes(query)).sort().map(maper)
+        data.filter(filtro).map(maper)
     )}
     if (sorter == 1) {
         return (
-            data.filter((element) => element.name.common.toLowerCase().includes(query)).sort((d1, d2) => (d1.name.common < d2.name.common) ? -1 : (d1.name.common > d2.name.common) ? 1 : 0).map(maper)
+            data.filter(filtro).sort((d1, d2) => (d1.name.common < d2.name.common) ? -1 : (d1.name.common > d2.name.common) ? 1 : 0).map(maper)
         )}
     if (sorter == 2) {
         return (
-            data.filter((element) => element.name.common.toLowerCase().includes(query)).sort((d1, d2) => (d1.population < d2.population) ? 1 : (d1.population > d2.population) ? -1 : 0).map(maper)
+            data.filter(filtro).sort((d1, d2) => (d1.population < d2.population) ? 1 : (d1.population > d2.population) ? -1 : 0).map(maper)
         )}
     if (sorter == 3) {
         return (
-            data.filter((element) => element.name.common.toLowerCase().includes(query)).sort((d1, d2) => (d1.area < d2.area) ? 1 : (d1.area > d2.area) ? -1 : 0).map(maper)
+            data.filter(filtro).sort((d1, d2) => (d1.area < d2.area) ? 1 : (d1.area > d2.area) ? -1 : 0).map(maper)
         )}
-
+          
 
 }
 
