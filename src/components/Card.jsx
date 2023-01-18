@@ -1,7 +1,7 @@
 const Card = ({data, query, sorter}) => {
     //Constante para usar en el metodo .map
-    const maper = pais=> {
-        const {name: {common, official}, continents, tld, unMember, capital, area, population, flags: {png}} = pais
+    const maper = country=> {
+        const {name: {common, official}, continents, tld, unMember, capital, area, population, flags: {png}} = country
         return (
         <div key={official} className="col-sm-12 col-md-4 col-lg-3">
             <div  className="card h-100">
